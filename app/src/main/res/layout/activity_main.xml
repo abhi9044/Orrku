@@ -1,155 +1,279 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
- <LinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="match_parent"
-     android:orientation="vertical">
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        android:orientation="horizontal">
-
-        <TextView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="@android:color/black"
-            android:text="@string/title"/>
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/button_background"
+            android:text="@string/add"
+            android:textColor="@android:color/white" />
 
-     <com.rengwuxian.materialedittext.MaterialEditText
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_marginLeft="5dp"
-         android:hint="Add Title eg. Lunch special get 20% off..."/>
-    </LinearLayout>
-
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_margin="5dp"
-         android:weightSum="4"
-         android:orientation="horizontal">
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:textSize="20dp"
-             android:layout_weight=".2"
-             android:textColor="@android:color/black"
-             android:text="@string/deal"/>
-
-         <com.rengwuxian.materialedittext.MaterialEditText
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginLeft="3dp"
-             android:layout_weight="1"
-             android:hint="eg. 30%"/>
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_weight=".2"
-             android:textSize="20dp"
-             android:layout_marginLeft="3dp"
-             android:textColor="@android:color/black"
-             android:text="@string/on"/>
-
-         <com.rengwuxian.materialedittext.MaterialEditText
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_weight="1"
-             android:layout_marginLeft="3dp"
-             android:hint="eg. 50$"/>
-
-     </LinearLayout>
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_margin="5dp"
-         android:weightSum="4"
-         android:orientation="horizontal">
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:textSize="20dp"
-             android:layout_weight=".2"
-             android:textColor="@android:color/black"
-             android:text="@string/from"/>
-
-         <com.rengwuxian.materialedittext.MaterialEditText
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginLeft="3dp"
-             android:layout_weight="1"
-             android:hint="7 PM"/>
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_weight=".2"
-             android:textSize="20dp"
-             android:layout_marginLeft="3dp"
-             android:textColor="@android:color/black"
-             android:text="@string/to"/>
-
-         <com.rengwuxian.materialedittext.MaterialEditText
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_weight="1"
-             android:layout_marginLeft="3dp"
-             android:hint="12 PM "/>
-
-     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:weightSum="4"
-        android:orientation="horizontal">
-
-        <TextView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_gravity="center"
-            android:textColor="@android:color/black"
-            android:text="@string/to"/>
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/button_background"
+            android:text="@string/set_as_deafult"
+            android:textColor="@android:color/white" />
 
-     <ca.antonious.materialdaypicker.MaterialDayPicker
-         android:id="@+id/day_picker"
-         android:layout_marginLeft="3dp"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_margin="5dp"
-         android:weightSum="4"
-         android:orientation="horizontal">
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:textSize="20dp"
-             android:layout_weight=".2"
-             android:textColor="@android:color/black"
-             android:text="@string/valid_till"/>
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-         <com.rengwuxian.materialedittext.MaterialEditText
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginLeft="3dp"
-             android:layout_weight="1"
-             android:hint="eg. 30%"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_launcher_background"
+                android:layout_marginBottom="8dp"
+                />
 
-     </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/button_background"
+                android:text="@string/add_image"
+                android:textColor="@android:color/white" />
 
- </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:hint="Add Title eg. Lunch special get 20% off..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text="@string/deal"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:hint="eg. 30%" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight=".2"
+                    android:text="@string/on"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:hint="eg. 50$" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text="@string/from"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:hint="7 PM" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight=".2"
+                    android:text="@string/to"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:hint="12 PM " />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/days"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <ca.antonious.materialdaypicker.MaterialDayPicker
+                    android:id="@+id/day_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text="@string/valid_till"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:hint="eg. 12/Nov/2018" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text="@string/restrictions"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:hint="If any eg.Limit 1 person per table "
+                    android:lines="3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text="@string/store_address"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:hint="347/34 Mount LA,California "
+                    android:lines="4" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
 
 
-</ScrollView>

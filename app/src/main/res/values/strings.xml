@@ -8,6 +8,11 @@
     <string name="from">From: </string>
     <string name="to">To: </string>
     <string name="valid_till">Valid Till: </string>
-
+    <string name="restrictions">Restrictions: </string>
+    <string name="store_address">Store Address: </string>
+    <string name="add">ADD </string>
+    <string name="days">Days: </string>
+    <string name="add_image">ADD IMAGE</string>
+    <string name="set_as_deafult">SET AS DEFAULT</string>
 
 </resources>
