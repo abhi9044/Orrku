@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Orrku</string>
+    <string name="deal">Deal(%): </string>
+    <string name="on">On($): </string>
+    <string name="percent">%</string>
+    <string name="dollar">$</string>
+    <string name="title">Title: </string>
+    <string name="from">From: </string>
+    <string name="to">To: </string>
+    <string name="valid_till">Valid Till: </string>
+
+
+</resources>
